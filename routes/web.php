@@ -13,6 +13,17 @@ Route::get('/', function () {
     ]);
 });
 
+$routes = [
+    'acerca' => App\Http\Controllers\AcercaController::class,
+    'trabajos' => App\Http\Controllers\TrabajosController::class,
+    'blogs' => App\Http\Controllers\BlogsController::class,
+    'galeria' => App\Http\Controllers\GaleriaController::class,
+];
+
+foreach ($routes as $uri => $controller) {
+    Route::get("/{$uri}", [$controller, 'index'])->name($uri);
+}
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
