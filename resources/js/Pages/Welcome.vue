@@ -6,8 +6,8 @@ import PortafolioLayout from '@/Layouts/PortafolioLayout.vue';
 <template>
 
     <Head title="Portafolio" />
-    <div>
+    <div class="min-h-screen text-white flex flex-col items-center justify-center">
         <PortafolioLayout />
-        Hola
+        <div class="mt-8 text-lg">Hola, este es el contenido principal.</div>
     </div>
 </template>
