@@ -45,7 +45,7 @@ export default defineComponent({
     <Head :title="pageTitle" />
     <BackgroundEffect />
     <div
-        :class="['flex flex-col md:flex-row pt-8 md:pt-20 px-10 z-40 mb-4', isMobile || isTablet ? 'items-start' : 'items-center']">
+        :class="['flex flex-col md:flex-row pt-8 md:pt-[50px] px-10 z-40', isMobile || isTablet ? 'items-start' : 'items-center']">
         <div class="flex-shrink-0 w-64 md:w-80 lg:w-96 max-w-full md:mr-10 mb-9 md:mb-0">
             <img src="imgs/yo.png" alt="Avatar"
                 class="w-full h-auto object-contain drop-shadow-[0_4px_8px_rgba(255,255,255,0.5)]" />
@@ -99,7 +99,7 @@ export default defineComponent({
                             <img :src="author.img" :alt="author.name" class="w-full h-full object-cover" />
                         </div>
                     </div>
-                    <p class="text-gray-400 text-base md:text-lg leading-relaxed">
+                    <p class="text-gray-400 text-lg md:text-xl leading-relaxed">
                         Desarrollo de un sistema de diseño altamente flexible y personalizable utilizando Vue.js para
                         front-end y Laravel para hacerlo dinámico.
                     </p>
