@@ -1,11 +1,13 @@
 <script lang="ts">
 import { Head } from '@inertiajs/vue3';
 import { defineComponent } from 'vue';
+import BackgroundEffect from '@/Components/BackgroundEffect.vue';
 
 export default defineComponent({
     name: 'Inicio',
     components: {
         Head,
+        BackgroundEffect,
     },
     computed: {
         pageTitle() {
@@ -16,18 +18,53 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="text-left space-y-6">
+    <BackgroundEffect />
+    <div class="text-left pt-8 xs:pt-8 md:pt-20 lg:pt-20 xl:pt-20 pl-10 pr-10 z-40">
 
         <Head :title="pageTitle" />
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            Ingeniero de sistemas <br /> e Informática
+            Ingeniero de Sistemas <br /> e Informática
         </h1>
 
         <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Me llamo Marvin y soy alguien apasionado por crear <span class="text-[#3fb27f] font-semibold">soluciones
-                tecnológicas
-                innovadoras y eficientes</span>, donde me
-            especializo en el desarrollo de software.
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
+        </p>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Me llamo Marvin y estoy pendiente en mejorar y crear <span class="text-primary font-semibold">soluciones
+                tecnológicas innovadoras y eficientes</span>, dentro de la especialización del desarrollo de software.
         </p>
     </div>
 </template>
