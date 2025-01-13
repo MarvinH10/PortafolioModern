@@ -89,7 +89,7 @@ export default defineComponent({
         </div>
         <main
             class="relative flex flex-col items-center justify-center bg-gradient-to-b from-[#000000] via-[#080808] to-[#0c0c0c] text-white overflow-auto w-full min-h-screen">
-            <router-view />
+            <router-view :isTablet="isTablet" :isMobile="isMobile" :class="['', isMobile ? 'mb-[5rem]' : '']" />
         </main>
     </div>
 </template>

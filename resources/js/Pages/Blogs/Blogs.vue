@@ -5,6 +5,7 @@ import BackgroundEffect from '@/Components/BackgroundEffect.vue';
 
 export default defineComponent({
     name: 'Blogs',
+    inheritAttrs: false,
     components: {
         Head,
         BackgroundEffect,
