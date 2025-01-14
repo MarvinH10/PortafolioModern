@@ -23,6 +23,10 @@ export default defineComponent({
             type: Boolean,
             required: false,
         },
+        isMobileSmall: {
+            type: Boolean,
+            required: false,
+        },
     },
     data() {
         return {
@@ -45,7 +49,7 @@ export default defineComponent({
     <Head :title="pageTitle" />
     <BackgroundEffect />
     <div
-        :class="['flex flex-col md:flex-row pt-8 md:pt-[50px] px-10 z-40', isMobile || isTablet ? 'items-start' : 'items-center']">
+        :class="['flex flex-col md:flex-row pt-8 md:pt-[50px] px-10 z-40', (isMobile || isTablet) ? 'items-start' : 'items-center']">
         <div class="flex-shrink-0 w-64 md:w-80 lg:w-96 max-w-full md:mr-10 mb-9 md:mb-0">
             <img src="imgs/yo.png" alt="Avatar"
                 class="w-full h-auto object-contain drop-shadow-[0_4px_8px_rgba(255,255,255,0.5)]" />
@@ -80,12 +84,21 @@ export default defineComponent({
             </div>
         </div>
     </div>
-    <div class="pt-16 px-6 md:px-16 lg:px-20 xl:px-28 flex flex-col items-center gap-8 z-40 mb-4">
+    <div class="pt-4 px-6 md:px-16 lg:px-20 xl:px-28 flex flex-col items-center gap-8 z-40 mb-4">
         <div class="w-full max-w-4xl">
-            <ImageWithFrames :imageUrl="'imgs/workexample.png'
+            <!-- <ImageWithFrames :imageUrl="'imgs/workexample.png'
                 " :altText="'Proyecto Imagen'"
                 greenBorderClass="absolute -top-2 -left-2 xs:-top-3 xs:-left-3 sm:-top-4 sm:-left-4 md:-top-5 md:-left-5 lg:-top-6 lg:-left-6 xl:-top-6 xl:-left-6 w-[120px] h-[120px] xs:w-[130px] xs:h-[130px] sm:w-[300px] sm:h-[300px] md:w-[330px] md:h-[330px] lg:w-[300px] lg:h-[300px] border-[10px] sm:border-[15px] md:border-[17px] border-primary rounded-[15px] sm:rounded-[20px] lg:rounded-[25px] z-0"
-                blackBorderClass="absolute -bottom-2 -right-2 xs:-bottom-3 xs:-right-3 sm:-bottom-4 sm:-right-4 md:-bottom-5 md:-right-5 w-[140px] h-[140px] xs:w-[160px] xs:h-[160px] sm:w-[300px] sm:h-[300px] md:w-[320px] md:h-[320px] lg:w-[280px] lg:h-[280px] bg-[#35495e] z-0 clip-path rounded-br-[15px] lg:rounded-br-[17px] sm:rounded-br-[17px]" />
+                blackBorderClass="absolute -bottom-2 -right-2 xs:-bottom-3 xs:-right-3 sm:-bottom-4 sm:-right-4 md:-bottom-5 md:-right-5 w-[140px] h-[140px] xs:w-[160px] xs:h-[160px] sm:w-[300px] sm:h-[300px] md:w-[320px] md:h-[320px] lg:w-[280px] lg:h-[280px] bg-white z-0 clip-path rounded-br-[15px] lg:rounded-br-[17px] sm:rounded-br-[17px]" /> -->
+            <div class="relative w-full max-w-4xl mx-auto">
+                <div class="relative">
+                    <img src="imgs/laptop.png" alt="Laptop" class="w-full object-contain drop-shadow-[0_4px_8px_rgba(255,255,255,0.5)]" />
+                    <div :class="['absolute inset-0 left-[19%] right-[19%] bottom-[25%] z-[-1]', isMobile ? 'top-[6.9%]' : 'top-[10%]']">
+                        <img src="imgs/workexample.png" alt="Proyecto en pantalla"
+                            :class="['w-full h-full object-cover rounded-lg shadow-lg', isMobileSmall ? 'mt-4' : 'mt-[25px]']" />
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="flex flex-col items-center text-center text-white max-w-3xl mx-auto gap-6">
             <div class="flex flex-col md:flex-row justify-between items-start gap-6 text-left">

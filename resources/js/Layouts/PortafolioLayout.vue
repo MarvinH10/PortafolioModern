@@ -34,10 +34,12 @@ export default defineComponent({
 
         const isTablet = ref(window.innerWidth <= 830);
         const isMobile = ref(window.innerWidth <= 640);
+        const isMobileSmall = ref(window.innerWidth <= 400);
 
         const handleResize = () => {
             isTablet.value = window.innerWidth <= 830;
             isMobile.value = window.innerWidth <= 640;
+            isMobileSmall.value = window.innerWidth <= 400;
         };
 
         onMounted(() => {
@@ -56,6 +58,7 @@ export default defineComponent({
             currentTime,
             isTablet,
             isMobile,
+            isMobileSmall,
         };
     },
 });
@@ -89,7 +92,7 @@ export default defineComponent({
         </div>
         <main
             class="relative flex flex-col items-center justify-center bg-gradient-to-b from-[#000000] via-[#080808] to-[#0c0c0c] text-white overflow-auto w-full min-h-screen">
-            <router-view :isTablet="isTablet" :isMobile="isMobile" :class="['', isMobile ? 'mb-[5rem]' : '']" />
+            <router-view :isTablet="isTablet" :isMobile="isMobile" :isMobileSmall="isMobileSmall" :class="['', isMobile ? 'mb-[5rem]' : '']" />
         </main>
     </div>
 </template>
