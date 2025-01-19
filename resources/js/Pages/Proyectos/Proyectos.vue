@@ -4,7 +4,7 @@ import { defineComponent } from 'vue';
 import BackgroundEffect from '@/Components/BackgroundEffect.vue';
 
 export default defineComponent({
-    name: 'Trabajos',
+    name: 'Proyectos',
     inheritAttrs: false,
     components: {
         Head,

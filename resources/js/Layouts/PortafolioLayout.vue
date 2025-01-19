@@ -16,7 +16,7 @@ export default defineComponent({
         const menuItems = [
             { name: 'Inicio', icon: 'IconHome', link: '/' },
             { name: 'Acerca de mí', icon: 'IconUser', link: '/acerca' },
-            { name: 'Trabajos', icon: 'IconBriefcase', link: '/trabajos' },
+            { name: 'Proyectos', icon: 'IconBriefcase', link: '/proyectos' },
             { name: 'Blogs', icon: 'IconArticle', link: '/blogs' },
             { name: 'Galería', icon: 'IconLibraryPhoto', link: '/galeria' },
         ];
@@ -77,7 +77,7 @@ export default defineComponent({
                                 class="flex items-center gap-2 px-3 py-1 rounded-lg hover:bg-primary transition-all duration-500 cursor-pointer"
                                 active-class="bg-primary" exact-active-class="bg-primary">
                                 <component :is="item.icon"
-                                    class="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
+                                    class="w-6 h-6 duration-300 group-hover:scale-110" />
                                 <span v-if="!isMobile">{{ item.name }}</span>
                             </router-link>
                             <div v-if="isMobile"

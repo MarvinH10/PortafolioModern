@@ -15,7 +15,7 @@ Route::get('/', function () {
 
 $routes = [
     'acerca' => App\Http\Controllers\AcercaController::class,
-    'trabajos' => App\Http\Controllers\TrabajosController::class,
+    'proyectos' => App\Http\Controllers\ProyectosController::class,
     'blogs' => App\Http\Controllers\BlogsController::class,
     'galeria' => App\Http\Controllers\GaleriaController::class,
 ];

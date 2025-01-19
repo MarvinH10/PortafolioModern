@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class TrabajosController extends Controller
+class ProyectosController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Trabajos/Trabajos');
+        return Inertia::render('Proyectos/Proyectos');
     }
 }
