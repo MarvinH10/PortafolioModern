@@ -52,9 +52,9 @@ export default defineComponent({
             </div>
         </div>
 
-        <div :class="['flex justify-center gap-2 items-center', isMobile ? '' : 'mt-[-1px]']">
+        <div :class="['flex justify-center gap-2 items-center mr-[40px] ml-[40px]', isMobile ? '' : 'mt-[-1px]']">
             <div v-for="(image, index) in images" :key="image" @click="currentIndex = index" :class="[
-                'h-[3px] cursor-pointer transition-all duration-300 rounded-full z-10',
+                'h-[5px] cursor-pointer transition-all duration-300 rounded-full z-10',
                 currentIndex === index ? 'bg-primary' : 'bg-gray-500',
             ]" :style="{
                 width: `${100 / images.length}%`,

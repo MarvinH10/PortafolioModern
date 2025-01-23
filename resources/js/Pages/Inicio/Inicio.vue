@@ -5,6 +5,7 @@ import { IconArrowBigRightFilled } from '@tabler/icons-vue';
 import BackgroundEffect from '@/Components/BackgroundEffect.vue';
 import ImageWithFrames from '@/Components/ImageWithFrames.vue';
 import CarouselLaptop from '@/Components/CarouselLaptop.vue';
+import 'animate.css';
 
 export default defineComponent({
     name: 'Inicio',
@@ -54,23 +55,26 @@ export default defineComponent({
         :class="['flex flex-col md:flex-row px-10 z-40', (isMobile || isTablet) ? 'items-start' : 'items-center pt-8 md:pt-[50px]']">
         <div class="flex-shrink-0 w-64 md:w-80 lg:w-96 max-w-full md:mr-10 mb-9 md:mb-0">
             <img src="imgs/yo.png" alt="Avatar"
-                class="w-full h-auto object-contain drop-shadow-[0_4px_8px_rgba(255,255,255,0.5)]" />
+                class="animate__animated animate__slideInDown w-full h-auto object-contain drop-shadow-[0_4px_8px_rgba(255,255,255,0.5)]" />
         </div>
         <div class="text-left flex-1">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-                Ingeniero de Sistemas <br /> e Informática
-            </h1>
-            <p :class="['text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed', (isMobile || isTablet) ? 'pt-3' : 'pt-10']">
-                Me llamo Marvin y me especializo en crear <span class="text-primary font-semibold">soluciones
-                    tecnológicas innovadoras</span>.
-                Disfruto trabajar con <span class="text-primary font-semibold">Vue.js</span> por su simplicidad,
-                flexibilidad y eficiencia para
-                desarrollar aplicaciones modernas.
-            </p>
+            <div class="animate__animated animate__zoomInRight">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    Ingeniero de Sistemas <br /> e Informática
+                </h1>
+                <p
+                    :class="['text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed', (isMobile || isTablet) ? 'pt-3' : 'pt-10']">
+                    Me llamo Marvin y me especializo en crear <span class="text-primary font-semibold">soluciones
+                        tecnológicas innovadoras</span>.
+                    Disfruto trabajar con <span class="text-primary font-semibold">Vue.js</span> por su simplicidad,
+                    flexibilidad y eficiencia para
+                    desarrollar aplicaciones modernas.
+                </p>
+            </div>
             <div class="pt-6">
                 <router-link to="/acerca" class="inline-block">
                     <button
-                        class="bg-primary text-white px-1 py-1 rounded-lg text-lg font-semibold shadow-lg hover:bg-primary-dark transition-all duration-300 flex items-center gap-3 group">
+                        class="animate__animated animate__zoomInUp bg-primary text-white px-1 py-1 rounded-lg text-lg font-semibold shadow-lg hover:bg-primary-dark transition-all duration-300 flex items-center gap-3 group">
                         <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center overflow-hidden">
                             <img src="imgs/perfil.jpg" alt="Perfil" class="w-full h-full object-cover">
                         </div>
@@ -114,3 +118,17 @@ export default defineComponent({
         </div>
     </div>
 </template>
+
+<style scoped>
+.animate__animated.animate__zoomInRight {
+    --animate-duration: 2.5s;
+}
+
+.animate__animated.animate__zoomInUp {
+    --animate-duration: 2.5s;
+}
+
+.animate__animated.animate__slideInDown {
+    --animate-duration: 2.5s;
+}
+</style>

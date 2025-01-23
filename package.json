@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "@tabler/icons-vue": "^3.28.1",
+        "animate.css": "^4.1.1",
         "vue-router": "^4.5.0"
     }
 }
