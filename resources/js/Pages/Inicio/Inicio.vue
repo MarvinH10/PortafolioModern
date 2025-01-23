@@ -70,27 +70,27 @@ export default defineComponent({
                     flexibilidad y eficiencia para
                     desarrollar aplicaciones modernas.
                 </p>
-            </div>
-            <div class="pt-6">
-                <router-link to="/acerca" class="inline-block">
-                    <button
-                        class="animate__animated animate__zoomInUp bg-primary text-white px-1 py-1 rounded-lg text-lg font-semibold shadow-lg hover:bg-primary-dark transition-all duration-300 flex items-center gap-3 group">
-                        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                            <img src="imgs/perfil.jpg" alt="Perfil" class="w-full h-full object-cover">
-                        </div>
-                        <span class="text-[16px] flex items-center transition-all duration-300 group-hover:pr-3">
-                            <span class="mb-[2px]">Acerca de mí</span>
-                            <span
-                                class="transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-2">
-                                <IconArrowBigRightFilled class="w-5 h-5" />
+                <div class="pt-6">
+                    <router-link to="/acerca" class="inline-block">
+                        <button
+                            class="bg-primary text-white px-1 py-1 rounded-lg text-lg font-semibold shadow-lg hover:bg-primary-dark transition-all duration-300 flex items-center gap-3 group">
+                            <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                                <img src="imgs/perfil.jpg" alt="Perfil" class="w-full h-full object-cover">
+                            </div>
+                            <span class="text-[16px] flex items-center transition-all duration-300 group-hover:pr-3">
+                                <span class="mb-[2px]">Acerca de mí</span>
+                                <span
+                                    class="transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-2">
+                                    <IconArrowBigRightFilled class="w-5 h-5" />
+                                </span>
                             </span>
-                        </span>
-                    </button>
-                </router-link>
+                        </button>
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>
-    <div class="pt-4 px-6 md:px-16 lg:px-20 xl:px-28 flex flex-col items-center gap-8 z-40 mb-4">
+    <div class="pt-4 px-6 md:px-16 lg:px-20 xl:px-28 flex flex-col items-center gap-8 z-40 mb-4 overflow-hidden">
         <CarouselLaptop :isMobile="isMobile" :isMobileSmall="isMobileSmall" />
         <div class="flex flex-col items-center text-center text-white max-w-3xl mx-auto gap-6">
             <div class="flex flex-col md:flex-row justify-between items-start gap-6 text-left">
@@ -121,10 +121,6 @@ export default defineComponent({
 
 <style scoped>
 .animate__animated.animate__zoomInRight {
-    --animate-duration: 2.5s;
-}
-
-.animate__animated.animate__zoomInUp {
     --animate-duration: 2.5s;
 }
 

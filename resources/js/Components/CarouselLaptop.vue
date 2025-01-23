@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent, ref, computed } from "vue";
+import 'animate.css';
 
 export default defineComponent({
     name: "CarouselLaptop",
@@ -34,7 +35,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div :class="['w-full max-w-4xl', isMobile ? '' : 'mt-[-30px]']">
+    <div :class="['animate__animated animate__fadeInRight w-full max-w-4xl', isMobile ? '' : 'mt-[-30px]']">
         <div class="relative w-full max-w-4xl mx-auto">
             <div class="relative">
                 <img src="imgs/laptop.png" alt="Laptop"
@@ -63,3 +64,9 @@ export default defineComponent({
         </div>
     </div>
 </template>
+
+<style scoped>
+.animate__animated.animate__fadeInRight {
+    --animate-duration: 2.5s;
+}
+</style>
