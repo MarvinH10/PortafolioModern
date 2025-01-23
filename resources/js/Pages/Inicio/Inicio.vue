@@ -92,7 +92,7 @@ export default defineComponent({
     </div>
     <div class="pt-4 px-6 md:px-16 lg:px-20 xl:px-28 flex flex-col items-center gap-8 z-40 mb-4 overflow-hidden">
         <CarouselLaptop :isMobile="isMobile" :isMobileSmall="isMobileSmall" />
-        <div class="flex flex-col items-center text-center text-white max-w-3xl mx-auto gap-6">
+        <div class="animate__animated animate__fadeInRight flex flex-col items-center text-center text-white max-w-3xl mx-auto gap-6">
             <div class="flex flex-col md:flex-row justify-between items-start gap-6 text-left">
                 <h3 class="text-2xl md:text-3xl font-semibold">
                     Construyendo una UI personalizable, para tu portafolio
@@ -125,6 +125,10 @@ export default defineComponent({
 }
 
 .animate__animated.animate__slideInDown {
+    --animate-duration: 2.5s;
+}
+
+.animate__animated.animate__fadeInRight {
     --animate-duration: 2.5s;
 }
 </style>
