@@ -37,6 +37,26 @@ export default defineComponent({
                 { name: 'Autor Principal', img: 'imgs/perfil.jpg' },
                 // { name: 'Coautor', img: 'imgs/perfil.jpg' },
             ],
+            cards: [
+                {
+                    img: 'imgs/workexample.png',
+                    title: 'Proyecto 1',
+                    description: 'Una breve descripción de este proyecto.',
+                    link: '/proyectos/1',
+                },
+                {
+                    img: 'imgs/workexample.png',
+                    title: 'Proyecto 2',
+                    description: 'Detalles sobre este servicio o solución.',
+                    link: '/proyectos/2',
+                },
+                {
+                    img: 'imgs/workexample.png',
+                    title: 'Proyecto 3',
+                    description: 'Descubre más sobre este proyecto aquí.',
+                    link: '/proyectos/3',
+                },
+            ],
         };
     },
     computed: {
@@ -59,7 +79,7 @@ export default defineComponent({
         </div>
         <div class="text-left flex-1">
             <div class="animate__animated animate__zoomInRight">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-1">
                     Ingeniero de Sistemas <br /> e Informática
                 </h1>
                 <p
@@ -90,9 +110,10 @@ export default defineComponent({
             </div>
         </div>
     </div>
-    <div class="pt-4 px-6 md:px-16 lg:px-20 xl:px-28 flex flex-col items-center gap-8 z-40 mb-4 overflow-hidden">
+    <div class="pt-4 px-6 md:px-16 lg:px-20 xl:px-28 flex flex-col items-center gap-8 z-40 overflow-hidden">
         <CarouselLaptop :isMobile="isMobile" :isMobileSmall="isMobileSmall" />
-        <div class="animate__animated animate__fadeInRight flex flex-col items-center text-center text-white max-w-3xl mx-auto gap-6">
+        <div
+            class="animate__animated animate__fadeInRight flex flex-col items-center text-center text-white max-w-3xl mx-auto gap-6">
             <div class="flex flex-col md:flex-row justify-between items-start gap-6 text-left">
                 <h3 class="text-2xl md:text-3xl font-semibold">
                     Construyendo una UI personalizable, para tu portafolio
@@ -115,6 +136,25 @@ export default defineComponent({
                     </router-link>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="pt-16 px-8 md:px-16 lg:px-20 xl:px-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start mb-4 z-40">
+        <div v-for="(card, index) in cards" :key="index"
+            class="bg-[#0c0c0c] drop-shadow-[0_0_3px_rgba(255,255,255,0.5)] text-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <div class="mb-4">
+                <img :src="card.img" :alt="card.title" class="rounded-lg w-full object-cover h-40" />
+            </div>
+            <h4 class="text-lg font-semibold group-hover:text-primary transition-all duration-300">
+                {{ card.title }}
+            </h4>
+            <p class="text-white text-sm mt-2">
+                {{ card.description }}
+            </p>
+            <router-link :to="card.link"
+                class="flex items-center gap-2 mt-4 text-primary font-semibold hover:underline transition-all duration-300">
+                Ver más
+                <IconArrowBigRightFilled class="w-5 h-5" />
+            </router-link>
         </div>
     </div>
 </template>
