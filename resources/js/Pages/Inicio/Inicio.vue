@@ -42,19 +42,19 @@ export default defineComponent({
                     img: 'imgs/workexample.png',
                     title: 'Proyecto 1',
                     description: 'Una breve descripción de este proyecto.',
-                    link: '/proyectos/1',
+                    link: '/proyectos',
                 },
                 {
                     img: 'imgs/workexample.png',
                     title: 'Proyecto 2',
                     description: 'Detalles sobre este servicio o solución.',
-                    link: '/proyectos/2',
+                    link: '/proyectos',
                 },
                 {
                     img: 'imgs/workexample.png',
                     title: 'Proyecto 3',
                     description: 'Descubre más sobre este proyecto aquí.',
-                    link: '/proyectos/3',
+                    link: '/proyectos',
                 },
             ],
         };
